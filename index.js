@@ -43,7 +43,7 @@ StaticSiteGeneratorWebpackPlugin.prototype.apply = function(compiler) {
         renderPromises = self.outputPaths.map(function(outputPath) {
           var outputFileName = outputPath.replace(/^(\/|\\)/, ''); // Remove leading slashes for webpack-dev-server
 
-          if (!/\.(html?)$/i.test(outputFileName)) {
+          if (!/\.(html|txt|xml?)$/i.test(outputFileName)) {
             outputFileName = path.join(outputFileName, 'index.html');
           }
 
